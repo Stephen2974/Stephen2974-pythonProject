@@ -20,10 +20,10 @@ class DaMaiTicket:
         # 登录信息
         self.login_cookies = {}
         self.session = session()
-        self.login_id: str = 'account'  # 大麦网登录账户名
-        self.login_password: str = 'password'  # 大麦网登录密码
+        self.login_id: str = '18103578133'  # 大麦网登录账户名
+        self.login_password: str = '040606Ll'  # 大麦网登录密码
         # 以下为抢票必须的参数
-        self.item_id: int = 610820299671  # 商品id
+        self.item_id: int = 706451368087  # 商品id
         self.viewer: list = ['viewer1']  # 在大麦网已填写的观影人
         self.buy_nums: int = 1  # 购买影票数量, 需与观影人数量一致
         self.ticket_price: int = 180  # 购买指定票价
@@ -45,7 +45,8 @@ class DaMaiTicket:
             'authority': 'detail.damai.cn',
             'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
             'sec-ch-ua-mobile': '?0',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/98.0.4758.102 Safari/537.36',
             'sec-ch-ua-platform': '"macOS"',
             'accept': '*/*',
             'sec-fetch-site': 'same-origin',
@@ -82,8 +83,10 @@ class DaMaiTicket:
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"macOS"',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/99.0.4844.74 Safari/537.36',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,'
+                      '*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'sec-fetch-site': 'same-site',
             'sec-fetch-mode': 'navigate',
             'sec-fetch-user': '?1',

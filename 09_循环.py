@@ -54,10 +54,9 @@ row = 1
 while row <= 5:
     print("*" * row, end="---\n")
     row += 1
-<<<<<<< HEAD
-for i in range(1,10):
-    for j in range(1,i+1):
-=======
 # for i in range(1,10):
 #     for j in range(1,i+1):
->>>>>>> c89c387 (Initial commit)
+
+# for i in range(1,10):
+#     for j in range(1,i+1):
+
