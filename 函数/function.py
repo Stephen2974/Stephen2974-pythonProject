@@ -17,3 +17,33 @@ def say_Hello():
     print("hello1")
     print("hello2")
     print("hello3")
+
+
+def sum_sum():
+    num1 = int(input("数值1："))
+    num2 = int(input("数值2："))
+    result3 = num1 + num2
+    print("%d + %d = %d" % (num1, num2, result3))
+
+
+def sum_2_sum(num1, num2):
+    """对两个数字的求和"""
+    result2 = num1 + num2
+    print("%d + %d = %d" % (num1, num2, result2))
+    return result2
+
+
+sum_2_sum(50, 21)
+result = sum_2_sum(50, 20)
+
+
+def test1():
+    print("*")
+
+
+def test2():
+    print("-")
+    test1()
+
+
+test2()
