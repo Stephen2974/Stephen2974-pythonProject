@@ -26,7 +26,7 @@ class DaMaiTicket:
         self.item_id: int = 706451368087  # 商品id
         self.viewer: list = ['viewer1']  # 在大麦网已填写的观影人
         self.buy_nums: int = 1  # 购买影票数量, 需与观影人数量一致
-        self.ticket_price: int = 180  # 购买指定票价
+        self.ticket_price: int = 1000  # 购买指定票价
 
     def step1_get_order_info(self, item_id, commodity_param, ticket_price=None):
         """
@@ -118,7 +118,8 @@ class DaMaiTicket:
         """ 选座购买，点击确认选座 """
         headers = {
             'authority': 'buy.damai.cn',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,'
+                      '*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-language': 'zh,en;q=0.9,en-US;q=0.8,zh-CN;q=0.7',
             'cache-control': 'max-age=0',
             'referer': 'https://seatsvc.damai.cn/',
@@ -130,7 +131,8 @@ class DaMaiTicket:
             'sec-fetch-site': 'same-site',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/100.0.4896.127 Safari/537.36',
         }
 
         params = {
@@ -227,7 +229,7 @@ class DaMaiTicket:
             print('alipayOrderId: ', buy_status.get('module').get('alipayOrderId'))
             print('支付宝支付链接: ', buy_status.get('module').get('alipayWapCashierUrl'))
 
-    def run(self):
+    def run(self) -> object:
         if len(self.viewer) != self.buy_nums:
             print('-' * 10, '购买数量与实际观演人数量不符', '-' * 10)
             return
