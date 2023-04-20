@@ -26,7 +26,17 @@
             - 列表.reverse                    逆序、反转
         - 取索引
             - 列表.index(数据)                 获取元素位置
+<<<<<<< HEAD
+    关键字、函数和方法
+        - 关键字是Py内置的、具有特殊意义的标识符、关键字后面不需要括号 del
+        - 一共三十三个关键字
+            - ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+        - 函数封装了独立的功能，可以直接调用
+        - 方法和函数类似，同样是封装了独立的功能
+        - 方法需要通过对象来调用，表示针对这个对象要做的操作
+=======
 
+>>>>>>> origin/master
 """
 name_list = ["curry", "green", "klay"]
 name_list1 = ["james", "durant"]
@@ -41,4 +51,15 @@ print(name_list)
 name_list.pop()
 print(name_list)
 print(len(name_list))
+name_list.remove("green")
+print(name_list)
+del name_list[3]
+print(name_list)
+name_list.sort()
+number_list = [1, 7, 3, 4, 6, 8]
+number_list.sort()
+print(number_list)
+number_list.sort(reverse=True)
+print(number_list)
+
 
